@@ -1,0 +1,1688 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="../../icon/logo001.png">
+    <link rel="stylesheet" href="../../css/productdetail.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="../../bootstrap/jquery-3.0.0.js"></script>
+    <script src="../../bootstrap/popper.min.js"></script>
+    <script src="../../bootstrap/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+
+    <script src="../../jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../../js/home.js"></script>
+
+    <title>Trang sản phẩm</title>
+
+</head>
+
+<body>
+
+        <div class='thetop'></div>
+    <div class='scrolltop'>
+        <div class='scroll icon'><i class="fa fa-4x fa-angle-up"></i></div>
+    </div>
+
+    <!--Modal đăng nhập-->
+    <div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true" data-backdrop="false">
+        <div class="modal-dialog modal-lg" role="document" id="pattient-1">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel" style="color:#1BA8FF">Đăng nhập</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row" id="col-left-modal-detail">
+                        <div class="col-lg-4">
+                            <span>Đăng nhập để theo dõi đơn hàng, lưu
+                                danh sách sản phẩm yêu thích, nhận
+                                nhiều ưu đãi hấp dẫn</span>
+                            <img src="../../icon/modal/1.png" alt="">
+                        </div>
+                        <div class="col-lg-8" style="border: 15px solid #F4F4F4;padding-top: 20px">
+                            <form>
+                                <div class="form-group row">
+                                    <label for="staticEmail" class="col-sm-2 col-form-label">Email/SĐT</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="formGroupExampleInput"
+                                            placeholder="Nhập Email hoặc Số Điện Thoại">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputPassword" class="col-sm-2 col-form-label"
+                                        style="white-space: nowrap;">Mật
+                                        khẩu</label>
+                                    <div class="col-sm-10">
+                                        <input type="password" class="form-control" id="inputPassword"
+                                            placeholder="Password từ 16 đến 32 ký tự">
+                                    </div>
+                                </div>
+                            </form>
+                            <span><small>Quên mật khẩu? Nhấn vào <a href="#">đây</a></small></span>
+                            <div class="row" style="width: 80%;margin-left:10%;margin-top: 3%;">
+                                <button type="button" class="btn btn-primary btn-block">
+                                    <i class="fab fa-facebook-f"></i><small> Đăng nhập bằng Facebook</small>
+                                </button>
+                            </div>
+                            <div class="row" style="width: 80%;margin-left:10%;margin-top: 3%;">
+                                <button type="button" class="btn btn-danger btn-block">
+                                    <i class="fab fa-google-plus-g"></i><small> Đăng nhập bằng Google</small>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Quay lại</button>
+                    <button type="button" class="btn btn-primary">Đăng Nhập</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal Tạo Tài Khoản-->
+    <div class="modal fade" id="exampleModal02" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true" data-backdrop="false">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel" style="color:#1BA8FF">Tạo tài khoản</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <span>Đăng nhập để theo dõi đơn hàng, lưu
+                                danh sách sản phẩm yêu thích, nhận
+                                nhiều ưu đãi hấp dẫn</span>
+                            <img src="../../icon/modal/1.png" alt="">
+                        </div>
+                        <div class="col-lg-8" style="border: 15px solid #F4F4F4;padding-top: 20px">
+                            <form>
+                                <div class="form-group row">
+                                    <label for="staticEmail" class="col-sm-2 col-form-label"><small>Họ
+                                            tên</small></label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control form-control-sm "
+                                            id="formGroupExampleInput" placeholder="Nhập họ tên">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticEmail"
+                                        class="col-sm-2 col-form-label"><small>Email</small></label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control form-control-sm "
+                                            id="formGroupExampleInput" placeholder="Nhập Số Điện Thoại">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticEmail" class="col-sm-2 col-form-label"><small
+                                            style="white-space: nowrap">Mã xác thực</small></label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control form-control-sm "
+                                            id="formGroupExampleInput"
+                                            placeholder="Nhập mã xác thực gửi đến số điện thoại trên">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticEmail"
+                                        class="col-sm-2 col-form-label"><small>Email</small></label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control form-control-sm "
+                                            id="formGroupExampleInput" placeholder="Nhập email">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputPassword" class="col-sm-2 col-form-label"><small>Mật
+                                            khẩu</small></label>
+                                    <div class="col-sm-10">
+                                        <input type="password" class="form-control form-control-sm" id="inputPassword"
+                                            placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputPassword" class="col-sm-2 col-form-label"
+                                        style="white-space: nowrap"><small>Giới tính</small></label>
+                                    <div style="margin-left: 17px">
+                                        <label for="radio-1"><small>Nam</small></label>
+                                        <input class="radiopick" type="radio" name="radio-1" id="radio-1">
+                                        <label for="radio-2"><small>Nữ</small></label>
+                                        <input class="radiopick" type="radio" name="radio-1" id="radio-2">
+                                        <label for="radio-3"><small>Khác</small></label>
+                                        <input class="radiopick" type="radio" name="radio-1" id="radio-3">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-lg-2" style="padding: 0;">
+                                        <label for="inputPassword" class="col-sm-2 col-form-label"
+                                            style="white-space: nowrap;"><small>Ngày sinh</small></label>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                            <option selected>Ngày</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                            <option selected>Tháng</option>
+                                            <option value="1">1</option>
+                                            <option value="2">1</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                            <option selected>Năm</option>
+                                            <option value="1">1</option>
+                                            <option value="2">1</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="custom-control custom-checkbox mr-sm-2">
+                                    <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                                    <label class="custom-control-label" for="customControlAutosizing"
+                                        style="font-size: 13px;margin-left: 20%;margin-bottom:20px">Nhận các thông tin
+                                        và chương trình khuyến mãi của Tiki qua email</label>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-block">Tạo tài khoản</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!---------------------------------------------------------------------------------------->
+
+    <header>
+        <div class="my-row">
+            <a href="#"><img src="../../img/home_Quang_cao/0.png" alt="Giảm 40%"></a>
+        </div>
+    </header>
+
+    <section>
+        <div class=" my-row-nav-1">
+            <nav class="navbar navbar-expand-sm navbar-light  container-fluid" id="navbar-1">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto ">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#"><i class="fab fa-chrome"></i> Trợ lý Tiki </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-bell"></i> Ưu đãi đối tác</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-gifts"></i> Phiếu quà tặng</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#"><i class="fas fa-building"></i> Đặt khách sạn </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-fighter-jet"></i> Đặt vé máy bay</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-bolt"></i> Săn hàng tồn</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#"><i class="fas fa-fire-alt"></i> Khuyến Mãi HOT </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-globe"></i> Hàng quốc tế</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-hand-holding-usd"></i> Bán hàng cùng Tiki</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container-fluid" id="container-section-3">
+            <div class="row my-row-sec-3 ">
+                <div class="col-xs-6 col-sm-2 col-md-2 col-lg-1 d-none d-md-block">
+                    <a href="home.html"><img src="../../icon/tikinow.png" class="img-fluid "></a>
+                </div>
+                <div class="col-xs-6 col-sm-10 col-md-10 col-lg-6 d-none d-md-block">
+                    <div class="input-group ">
+                        <input type="text" class="form-control"
+                            placeholder="Tìm sản phẩm, danh mục hay thương hiệu mong muốn ..."
+                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-secondary " type="button" id="button-addon2">Tìm kiếm</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-1 d-none d-md-block">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p><i class="fas fa-box"></i></p>
+                        </div>
+                        <div class="col-md-8"><span>Theo dõi<br>đơn hàng</span></div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-1 d-none d-md-block">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p><i class="fas fa-bell"></i></p>
+                        </div>
+                        <div class="col-md-8"><span>Thông báo<br>của tôi</span></div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-1 d-none d-md-block">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p><i class="fas fa-user"></i></p>
+                        </div>
+                        <div class="col-md-8" id="modal-login-account-just"><span>Đăng nhập<br><small>Tài
+                                    khoản</small></span>
+                            <div id="modal-login-account">
+                                <div class="row">
+                                    <button type="button" class="btn btn-warning" data-toggle="modal"
+                                        data-target="#exampleModal">Đăng Nhập</button>
+                                </div>
+                                <div class="row">
+                                    <button type="button" class="btn btn-warning" data-toggle="modal"
+                                        data-target="#exampleModal02">Tạo Tài Khoản</button>
+                                </div>
+                                <div class="row">
+                                    <button type="button" class="btn btn-primary"><i
+                                            class="fab fa-facebook-f"></i><small> Đăng nhập bằng
+                                            Facebook</small></button>
+                                </div>
+                                <div class="row">
+                                    <button type="button" class="btn btn-danger"><i
+                                            class="fab fa-google-plus-g"></i><small> Đăng nhập bằng
+                                            Gmail</small></button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2 d-none d-md-block">
+                    <button id="sec-3-1" type="button" class="btn btn-light btn-block  btn-md">
+                        <span><i class="fas fa-shopping-cart"></i></span>
+                        Giỏ hàng
+                    </button>
+                </div>
+            </div>
+
+            <div class="row my-row-sec-3-2">
+                <div class="col-md-4 col-lg-2 ">
+                    <div class="row ">
+                        <div class="col-md-3   ">
+                            <span><i class="fas fa-bars"></i></span>
+                        </div>
+                        <div class="col-md-9 ">
+                            <p id="danhmucsanpham">
+                                DANH MỤC SẢN PHẨM
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2 d-none d-md-block">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <span><i class="fas fa-map-marker-alt"></i></span>
+                        </div>
+                        <div class="col-md-9">
+                            <p>Bạn muốn giao hàng tới đâu?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2 d-none d-md-block">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <span><i class="fas fa-angle-down"></i></span>
+                        </div>
+                        <div class="col-md-9">
+                            <p style="font-size: 13px;">Sản phẩm bạn đã xem</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2 d-none d-md-block">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <span><i class="fab fa-gg-circle"></i></span>
+                        </div>
+                        <div class="col-md-9">
+                            <p id="text-ab-2">TiKiNOW giao nhanh <br><small>Hàng trăm nghìn sảm phẩm</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2 d-none d-md-block">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <span><i class="fab fa-gg-circle"></i></span>
+                        </div>
+                        <div class="col-md-9">
+                            <p id="text-ab-2">Tất cả sản phẩm tại đây<br>100% chính hiệu</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2 d-none d-md-block">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <span><i class="fab fa-gg-circle"></i></span>
+                        </div>
+                        <div class="col-md-9">
+                            <p>30 ngày đổi trả đễ dàng</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-------------------------------------Danh sách các sản phẩm-------------------------------------------------------------------------->
+
+    <section>
+        <div class="container-fluid" id="section-product">
+            <div class="row" id="danhsachsanpham">
+                <div class="col-lg-2" id="col-left-product">
+                    <p>DANH MỤC SẢN PHẨM</p>
+                    <ul>
+                        <a href="#">
+                            <li style="margin-left: 0;">Điện Thoại - Máy Tính Bảng</li>
+                        </a>
+                        <a href="#">
+                            <li><small>Điện thoại Smartphone <span>(476)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Máy tính bảng <span>(127)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Máy đọc sách <span>(19)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Điện thoại phổ thông <span>(213)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Điện thoại bàn <span>(38)</span></small></li>
+                        </a>
+                    </ul>
+                    <p>SẢN PHẨM ĐƯỢC GIAO TỪ</p>
+                    <ul>
+                        <a href="#">
+                            <li><small>Trong nước <span>(806)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Nước ngoài <span>(61)</span></small></li>
+                        </a>
+                    </ul>
+                    <p>ĐÁNH GIÁ</p>
+                    <ul>
+                        <span>
+                            <i style="color: #FFC120" class="fas fa-star"></i>
+                            <i style="color: #FFC120" class="fas fa-star"></i>
+                            <i style="color: #FFC120" class="fas fa-star"></i>
+                            <i style="color: #FFC120" class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(ít nhất 4 sao)</span>
+                        </span><br>
+                        <span>
+                            <i style="color: #FFC120" class="fas fa-star"></i>
+                            <i style="color: #FFC120" class="fas fa-star"></i>
+                            <i style="color: #FFC120" class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(ít nhất 3 sao)</span>
+                        </span><br>
+                        <span>
+                            <i style="color: #FFC120" class="fas fa-star"></i>
+                            <i style="color: #FFC120" class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(ít nhất 2 sao)</span>
+                        </span><br>
+                        <span>
+                            <i style="color: #FFC120" class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(ít nhất 1 sao)</span>
+                        </span>
+                    </ul>
+                    <p>GIÁ</p>
+                    <ul>
+                        <p>
+                            <label for="amount">Trong khoảng</label><br>
+                            <input type="text" id="amount" readonly style="border:0;color:red; font-weight:bold;">
+                        </p>
+                        <div id="slider-range"></div>
+                    </ul>
+                    <p>THƯƠNG HIỆU</p>
+                    <ul>
+                        <a href="#">
+                            <li><small>Apple <span>(97)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>FPT <span>(7)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Realme <span>(6)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Lenovo <span>(10)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>BlackBerry <span>(8)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Asus <span>(12)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Forme <span>(11)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Nokia <span>(29)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Huawei <span>(28)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Itel <span>(31)</span></small></li>
+                        </a>
+                        <ul  class="collapse multi-collapse" id="multiCollapseExample1">
+                                <a href="#">
+                                    <li><small>Phần Lan <span>(6)</span></small></li>
+                                </a>
+                                <a href="#">
+                                    <li><small>Việt Nam <span>(15)</span></small></li>
+                                </a>
+                                <a href="#">
+                                    <li><small>Hong Kong <span>(28)</span></small></li>
+                                </a>
+                                <a href="#">
+                                    <li><small>Tarung Quốc <span>(31)</span></small></li>
+                                </a>
+                            </ul>
+                        <li style="text-align: center; font-size: 12px;cursor: pointer;" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+                            <span>Xem thêm <i class="fas fa-caret-down"></i></span>
+                        </li>
+                     
+                        
+                    </ul>
+                    
+                    <p>XUẤT XỨ THƯƠNG HIỆU</p>
+                    <ul>
+                        <a href="#">
+                            <li><small>Phần Lan <span>(6)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Việt Nam <span>(15)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Hong Kong <span>(28)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Tarung Quốc <span>(31)</span></small></li>
+                        </a>
+                    </ul>
+                    <p>NƠI CHỈ GIAO HÀNG</p>
+                    <ul>
+                        <a href="#">
+                            <li><small>TP HỒ CHÍ MINH <span>(6)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>HÀ NỘI <span>(15)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>TPHCM VÀ HÀ NỘI <span>(28)</span></small></li>
+                        </a>
+                    </ul>
+                    <p>SỐ LƯỢNG SIM</p>
+                    <ul>
+                        <a href="#">
+                            <li><small>2 Sim <span>(228)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>1 Sim <span>(11)</span></small></li>
+                        </a>
+                    </ul>
+                    <p>DUNG LƯỢNG PIN</p>
+                    <ul>
+                        <a href="#">
+                            <li><small>Từ 2.500mAh đến 3.500 mSh <span>(6)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Từ 3.500 mSh đến 5.000mAh <span>(15)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Dưới 2.500 mAh <span>(28)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Trên 5.000 mAh <span>(31)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Đang cập nhật <span>(31)</span></small></li>
+                        </a>
+                    </ul>
+                    <p>KÍCH THƯỚC MÀN HÌNH</p>
+                    <ul>
+                        <a href="#">
+                            <li><small>Trên 5.5 inch <span>(6)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Từ 5 inch đến 5.5 inch <span>(15)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Từ 4.5 inch đến 5 inch <span>(28)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Dưới 4.5 inch <span>(31)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Đang cập nhật <span>(31)</span></small></li>
+                        </a>
+                    </ul>
+                    <p>ĐỘ PHÂN GIẢI MÀN HÌNH</p>
+                    <ul>
+                        <a href="#">
+                            <li><small>Retina (750 x 1334 pixels) <span>(97)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>HD+ (720 x 1480 Pixels) <span>(7)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>HD (720 x 1080 Pixel) <span>(6)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Full HD (1920 x 1080 Pixels) <span>(10)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Đang cập nhật <span>(8)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Full HD (1080 x 1620 Pixels) <span>(12)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>HD (828 x 1792 Pixels) <span>(11)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>2K (2560 x 1440 Pixels) <span>(29)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Full HD+ (2560 x 1080 Pixels) <span>(28)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Itel <span>(31)</span></small></li>
+                        </a>
+                        <ul  class="collapse multi-collapse" id="multiCollapseExample2">
+                                <a href="#">
+                                        <li><small>256GB<span>(6)</span></small></li>
+                                    </a>
+                                    <a href="#">
+                                        <li><small>Đang cập nhật <span>(15)</span></small></li>
+                                    </a>
+                                    <a href="#">
+                                        <li><small>128GB <span>(28)</span></small></li>
+                                    </a>
+                                    <a href="#">
+                                        <li><small>256GB<span>(6)</span></small></li>
+                                    </a>
+                                    <a href="#">
+                                        <li><small>Đang cập nhật <span>(15)</span></small></li>
+                                    </a>
+                                    <a href="#">
+                                        <li><small>128GB <span>(28)</span></small></li>
+                                    </a>
+                            </ul>
+                        <li style="text-align: center; font-size: 12px;cursor: pointer;" data-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+                            <span>Xem thêm <i class="fas fa-caret-down"></i></span>
+                        </li>
+                    </ul>
+                    <p>BỘ NHỚ TRONG </p>
+                    <ul>
+                        <a href="#">
+                            <li><small>256GB<span>(6)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Đang cập nhật <span>(15)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>128GB <span>(28)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>256GB<span>(6)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Đang cập nhật <span>(15)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>128GB <span>(28)</span></small></li>
+                        </a>
+                    </ul>
+                    <p>CAMERA SAU </p>
+                    <ul>
+                        <a href="#">
+                            <li><small>Từ 11MP đến 13MP<span>(6)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Dưới 8MP <span>(15)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Từ 14MP đến 16MP <span>(28)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Từ 8MP đến 10MP<span>(6)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Trên 16MP <span>(15)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Đang cập nhật <span>(28)</span></small></li>
+                        </a>
+                    </ul>
+                    <p>CAMERA TRƯỚC </p>
+                    <ul>
+                        <a href="#">
+                            <li><small>Trên 12MP<span>(6)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Từ 8MP đến 12MP <span>(15)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Từ 5MP đến 8MP <span>(28)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Dưới 8MP<span>(6)</span></small></li>
+                        </a>
+                    </ul>
+                    <p>NHÀ CUNG CẤP</p>
+                    <ul>
+                        <a href="#">
+                            <li><small>Foneshop <span>(97)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Techmorevn <span>(7)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Công thành Mobile <span>(6)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Đại ca xóm chùa <span>(10)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Hà Vy Moblie <span>(8)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Dương My Shop <span>(12)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Iugle moblie <span>(11)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Rkuten Shop <span>(29)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Fpt Shop <span>(28)</span></small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>An Lộc Shop <span>(31)</span></small></li>
+                        </a>
+                        <ul  class="collapse multi-collapse" id="multiCollapseExample3">
+                                <a href="#">
+                                        <li><small>256GB<span>(6)</span></small></li>
+                                    </a>
+                                    <a href="#">
+                                        <li><small>Đang cập nhật <span>(15)</span></small></li>
+                                    </a>
+                                    <a href="#">
+                                        <li><small>128GB <span>(28)</span></small></li>
+                                    </a>
+                                    <a href="#">
+                                        <li><small>256GB<span>(6)</span></small></li>
+                                    </a>
+                                    <a href="#">
+                                        <li><small>Đang cập nhật <span>(15)</span></small></li>
+                                    </a>
+                                    <a href="#">
+                                        <li><small>128GB <span>(28)</span></small></li>
+                                    </a>
+                            </ul>
+                        <li style="text-align: center; font-size: 12px;cursor: pointer;" data-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+                            <span>Xem thêm <i class="fas fa-caret-down"></i></span>
+                        </li>
+                    </ul>
+                    <img src="../../img/home_dienthoai/banner-product-detail-col-left.jpg" class="img-fluid"
+                        alt="Miễn phí vận chuyện">
+                </div>
+                <div class="col-lg-10" id="col-right-product">
+                    <div class="row" id="banner-1">
+                        <div class="col-lg-12">
+                            <div id="carouselExampleIndicators" class="carousel slide carousel-fade"
+                                data-ride="carousel" data-interval="2000">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active ">
+                                        <img class="d-block w-100" src="../../img/banner-1/1.jpg" alt="First slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../../img/banner-1/2.jpg" alt="Second slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../../img/banner-1/3.jpg" alt="Third slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../../img/banner-1/4.jpg" alt="Third slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="../../img/banner-1/5.jpg" alt="Third slide">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                                    data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                                    data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" id="banner-2">
+                        <div class="col-sm-12 col-lg-6">
+                            <img style="padding-left: 30px;" src="../../img/Banner-2/1.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-sm-12 col-lg-6">
+                            <img style="padding-right: 30px;" src="../../img/Banner-2/2.jpg" class="ing-fluid" alt="">
+                        </div>
+                    </div>
+
+                    <div class="row" id="banner-3">
+                        <div class="col-sm-6 col-md-4 col-lg-2">
+                            <img src="../../img/banner-3/1.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-2">
+                            <img src="../../img/banner-3/2.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-2">
+                            <img src="../../img/banner-3/3.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-2">
+                            <img src="../../img/banner-3/4.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-2">
+                            <img src="../../img/banner-3/5.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-2">
+                            <img src="../../img/banner-3/6.png" class="img-fluid" alt="">
+                        </div>
+
+                        <div class="row" id="banner-4">
+                            <div class="col-sm-12 col-md-6 col-lg-3">
+                                <img src="../../img/banner-4/1.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-3">
+                                <img src="../../img/banner-4/2.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-3">
+                                <img src="../../img/banner-4/3.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-3">
+                                <img src="../../img/banner-4/4.png" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                        <div class="row" id="navba-product">
+                            <div class="col-md-1">
+                                <span>Ưu tiên xem:</span>
+                            </div>
+                            <div class="col-md-1">
+                                <span>HÀNG MỚI</span>
+                            </div>
+                            <div class="col-md-1">
+                                <span>BÁN CHẠY</span>
+                            </div>
+                            <div class="col-md-1">
+                                <span>GIẢM GIÁ </span>
+                            </div>
+                            <div class="col-md-1">
+                                <span>GIÁ THẤP</span>
+                            </div>
+                            <div class="col-md-1">
+                                <span>GIÁ CAO</span>
+                            </div>
+                            <div class="col-md-1">
+                                <span>CHỌN LỌC</span>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="input-group input-group-sm mb-3" style="padding-top: 10px;">
+                                    <input type="text" class="form-control"
+                                        placeholder="Tìm trong điện thoại - máy tính bảng ..."
+                                        aria-label="Recipient's username" aria-describedby="button-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-success" type="button"
+                                            id="button-addon2">Tìm</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" id="blood-row">
+                            <div class="col-sm-6 col-md-4 col-lg-3" style="padding:0">
+                                <div class="card"  data-toggle="tooltip" data-placement="top" title="Điện Thoại Iphone XSMAX 128GB số 1 Hoa Kỳ">
+                                    <a href="#"><img src="../../img/home_dienthoai/1.jpg" class="card-img-top img-fluid"
+                                            alt="..."></a>
+                                    <div class="card-body">
+                                        <p class="card-text" style="color: gray;font-size: 14px;">Điện Thoại iPhone XS
+                                            Max 64GB-Hàng Chính...</p>
+                                        <span><strong>28.400.000 <ins>đ </ins></strong><small> -16%</small></span>
+                                        <span style="color: gray"><small><del>33.990.000
+                                                    <ins>đ</ins></del></small></span><br>
+                                        <span class="badge badge-pill badge-secondary"><small>Trả góp 0% chỉ 2.332.500
+                                                <ins>đ</ins>/tháng</small></span>
+                                        <span>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star-half-alt"></i>
+                                            <small style="font-size: 10px; white-space: nowrap;">(80 nhận xét)</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3" style="padding:0">
+                                <div class="card" data-toggle="tooltip" data-placement="top" title="Điện Thoại Iphone XSMAX 128GB số 1 Hoa Kỳ">
+                                    <img src="../../img/home_dienthoai/2.jpg" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text" style="color: gray;font-size: 14px;">Điện Thoại iPhone XS
+                                            Max 64GB-Hàng Chính...</p>
+                                        <span><strong>28.400.000 <ins>đ </ins></strong><small> -16%</small></span>
+                                        <span style="color: gray"><small><del>33.990.000
+                                                    <ins>đ</ins></del></small></span><br>
+                                        <span class="badge badge-pill badge-secondary"><small>Trả góp 0% chỉ 2.332.500
+                                                <ins>đ</ins>/tháng</small></span>
+                                        <span>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star-half-alt"></i>
+                                            <small style="font-size: 10px; white-space: nowrap;">(80 nhận xét)</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3" style="padding:0">
+                                <div class="card" data-toggle="tooltip" data-placement="top" title="Điện Thoại Iphone XSMAX 128GB số 1 Hoa Kỳ">
+                                    <img src="../../img/home_dienthoai/3.jpg" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text" style="color: gray;font-size: 14px;">Điện Thoại iPhone XS
+                                            Max 64GB-Hàng Chính...</p>
+                                        <span><strong>28.400.000 <ins>đ </ins></strong><small> -16%</small></span>
+                                        <span style="color: gray"><small><del>33.990.000
+                                                    <ins>đ</ins></del></small></span><br>
+                                        <span class="badge badge-pill badge-secondary"><small>Trả góp 0% chỉ 2.332.500
+                                                <ins>đ</ins>/tháng</small></span>
+                                        <span>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star-half-alt"></i>
+                                            <small style="font-size: 10px; white-space: nowrap;">(80 nhận xét)</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3" style="padding:0">
+                                <div class="card" data-toggle="tooltip" data-placement="top" title="Điện Thoại Iphone XSMAX 128GB số 1 Hoa Kỳ">
+                                    <img src="../../img/home_dienthoai/4.jpg" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text" style="color: gray;font-size: 14px;">Điện Thoại iPhone XS
+                                            Max 64GB-Hàng Chính...</p>
+                                        <span><strong>28.400.000 <ins>đ </ins></strong><small> -16%</small></span>
+                                        <span style="color: gray"><small><del>33.990.000
+                                                    <ins>đ</ins></del></small></span><br>
+                                        <span class="badge badge-pill badge-secondary"><small>Trả góp 0% chỉ 2.332.500
+                                                <ins>đ</ins>/tháng</small></span>
+                                        <span>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star-half-alt"></i>
+                                            <small style="font-size: 10px; white-space: nowrap;">(80 nhận xét)</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3" style="padding:0">
+                                <div class="card" data-toggle="tooltip" data-placement="top" title="Điện Thoại Iphone XSMAX 128GB số 1 Hoa Kỳ">
+                                    <img src="../../img/home_dienthoai/5.jpg" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text" style="color: gray;font-size: 14px;">Điện Thoại iPhone XS
+                                            Max 64GB-Hàng Chính...</p>
+                                        <span><strong>28.400.000 <ins>đ </ins></strong><small> -16%</small></span>
+                                        <span style="color: gray"><small><del>33.990.000
+                                                    <ins>đ</ins></del></small></span><br>
+                                        <span class="badge badge-pill badge-secondary"><small>Trả góp 0% chỉ 2.332.500
+                                                <ins>đ</ins>/tháng</small></span>
+                                        <span>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star-half-alt"></i>
+                                            <small style="font-size: 10px; white-space: nowrap;">(80 nhận xét)</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3" style="padding:0">
+                                <div class="card" data-toggle="tooltip" data-placement="top" title="Điện Thoại Iphone XSMAX 128GB số 1 Hoa Kỳ">
+                                    <img src="../../img/home_dienthoai/6.jpg" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text" style="color: gray;font-size: 14px;">Điện Thoại iPhone XS
+                                            Max 64GB-Hàng Chính...</p>
+                                        <span><strong>28.400.000 <ins>đ </ins></strong><small> -16%</small></span>
+                                        <span style="color: gray"><small><del>33.990.000
+                                                    <ins>đ</ins></del></small></span><br>
+                                        <span class="badge badge-pill badge-secondary"><small>Trả góp 0% chỉ 2.332.500
+                                                <ins>đ</ins>/tháng</small></span>
+                                        <span>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star-half-alt"></i>
+                                            <small style="font-size: 10px; white-space: nowrap;">(80 nhận xét)</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3" style="padding:0">
+                                <div class="card" data-toggle="tooltip" data-placement="top" title="Điện Thoại Iphone XSMAX 128GB số 1 Hoa Kỳ">
+                                    <img src="../../img/home_dienthoai/7.jpg" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text" style="color: gray;font-size: 14px;">Điện Thoại iPhone XS
+                                            Max 64GB-Hàng Chính...</p>
+                                        <span><strong>28.400.000 <ins>đ </ins></strong><small> -16%</small></span>
+                                        <span style="color: gray"><small><del>33.990.000
+                                                    <ins>đ</ins></del></small></span><br>
+                                        <span class="badge badge-pill badge-secondary"><small>Trả góp 0% chỉ 2.332.500
+                                                <ins>đ</ins>/tháng</small></span>
+                                        <span>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star-half-alt"></i>
+                                            <small style="font-size: 10px; white-space: nowrap;">(80 nhận xét)</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4  col-lg-3" style="padding:0">
+                                <div class="card" data-toggle="tooltip" data-placement="top" title="Điện Thoại Iphone XSMAX 128GB số 1 Hoa Kỳ">
+                                    <img src="../../img/home_dienthoai/8.jpg" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text" style="color: gray;font-size: 14px;">Điện Thoại iPhone XS
+                                            Max 64GB-Hàng Chính...</p>
+                                        <span><strong>28.400.000 <ins>đ </ins></strong><small> -16%</small></span>
+                                        <span style="color: gray"><small><del>33.990.000
+                                                    <ins>đ</ins></del></small></span><br>
+                                        <span class="badge badge-pill badge-secondary"><small>Trả góp 0% chỉ 2.332.500
+                                                <ins>đ</ins>/tháng</small></span>
+                                        <span>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star-half-alt"></i>
+                                            <small style="font-size: 10px; white-space: nowrap;">(80 nhận xét)</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3" style="padding:0">
+                                <div class="card" data-toggle="tooltip" data-placement="top" title="Điện Thoại Iphone XSMAX 128GB số 1 Hoa Kỳ">
+                                    <img src="../../img/home_dienthoai/1.jpg" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text" style="color: gray;font-size: 14px;">Điện Thoại iPhone XS
+                                            Max 64GB-Hàng Chính...</p>
+                                        <span><strong>28.400.000 <ins>đ </ins></strong><small> -16%</small></span>
+                                        <span style="color: gray"><small><del>33.990.000
+                                                    <ins>đ</ins></del></small></span><br>
+                                        <span class="badge badge-pill badge-secondary"><small>Trả góp 0% chỉ 2.332.500
+                                                <ins>đ</ins>/tháng</small></span>
+                                        <span>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star-half-alt"></i>
+                                            <small style="font-size: 10px; white-space: nowrap;">(80 nhận xét)</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3" style="padding:0">
+                                <div class="card" data-toggle="tooltip" data-placement="top" title="Điện Thoại Iphone XSMAX 128GB số 1 Hoa Kỳ">
+                                    <img src="../../img/home_dienthoai/2.jpg" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text" style="color: gray;font-size: 14px;">Điện Thoại iPhone XS
+                                            Max 64GB-Hàng Chính...</p>
+                                        <span><strong>28.400.000 <ins>đ </ins></strong><small> -16%</small></span>
+                                        <span style="color: gray"><small><del>33.990.000
+                                                    <ins>đ</ins></del></small></span><br>
+                                        <span class="badge badge-pill badge-secondary"><small>Trả góp 0% chỉ 2.332.500
+                                                <ins>đ</ins>/tháng</small></span>
+                                        <span>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star-half-alt"></i>
+                                            <small style="font-size: 10px; white-space: nowrap;">(80 nhận xét)</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3" style="padding:0">
+                                <div class="card" data-toggle="tooltip" data-placement="top" title="Điện Thoại Iphone XSMAX 128GB số 1 Hoa Kỳ">
+                                    <img src="../../img/home_dienthoai/3.jpg" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text" style="color: gray;font-size: 14px;">Điện Thoại iPhone XS
+                                            Max 64GB-Hàng Chính...</p>
+                                        <span><strong>28.400.000 <ins>đ </ins></strong><small> -16%</small></span>
+                                        <span style="color: gray"><small><del>33.990.000
+                                                    <ins>đ</ins></del></small></span><br>
+                                        <span class="badge badge-pill badge-secondary"><small>Trả góp 0% chỉ 2.332.500
+                                                <ins>đ</ins>/tháng</small></span>
+                                        <span>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star-half-alt"></i>
+                                            <small style="font-size: 10px; white-space: nowrap;">(80 nhận xét)</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3" style="padding:0">
+                                <div class="card" data-toggle="tooltip" data-placement="top" title="Điện Thoại Iphone XSMAX 128GB số 1 Hoa Kỳ">
+                                    <img src="../../img/home_dienthoai/4.jpg" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text" style="color: gray;font-size: 14px;">Điện Thoại iPhone XS
+                                            Max 64GB-Hàng Chính...</p>
+                                        <span><strong>28.400.000 <ins>đ </ins></strong><small> -16%</small></span>
+                                        <span style="color: gray"><small><del>33.990.000
+                                                    <ins>đ</ins></del></small></span><br>
+                                        <span class="badge badge-pill badge-secondary"><small>Trả góp 0% chỉ 2.332.500
+                                                <ins>đ</ins>/tháng</small></span>
+                                        <span>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star-half-alt"></i>
+                                            <small style="font-size: 10px; white-space: nowrap;">(80 nhận xét)</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3" style="padding:0">
+                                <div class="card" data-toggle="tooltip" data-placement="top" title="Điện Thoại Iphone XSMAX 128GB số 1 Hoa Kỳ">
+                                    <img src="../../img/home_dienthoai/5.jpg" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text" style="color: gray;font-size: 14px;">Điện Thoại iPhone XS
+                                            Max 64GB-Hàng Chính...</p>
+                                        <span><strong>28.400.000 <ins>đ </ins></strong><small> -16%</small></span>
+                                        <span style="color: gray"><small><del>33.990.000
+                                                    <ins>đ</ins></del></small></span><br>
+                                        <span class="badge badge-pill badge-secondary"><small>Trả góp 0% chỉ 2.332.500
+                                                <ins>đ</ins>/tháng</small></span>
+                                        <span>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star-half-alt"></i>
+                                            <small style="font-size: 10px; white-space: nowrap;">(80 nhận xét)</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3" style="padding:0">
+                                <div class="card" data-toggle="tooltip" data-placement="top" title="Điện Thoại Iphone XSMAX 128GB số 1 Hoa Kỳ">
+                                    <img src="../../img/home_dienthoai/6.jpg" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text" style="color: gray;font-size: 14px;">Điện Thoại iPhone XS
+                                            Max 64GB-Hàng Chính...</p>
+                                        <span><strong>28.400.000 <ins>đ </ins></strong><small> -16%</small></span>
+                                        <span style="color: gray"><small><del>33.990.000
+                                                    <ins>đ</ins></del></small></span><br>
+                                        <span class="badge badge-pill badge-secondary"><small>Trả góp 0% chỉ 2.332.500
+                                                <ins>đ</ins>/tháng</small></span>
+                                        <span>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star-half-alt"></i>
+                                            <small style="font-size: 10px; white-space: nowrap;">(80 nhận xét)</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3" style="padding:0">
+                                <div class="card" data-toggle="tooltip" data-placement="top" title="Điện Thoại Iphone XSMAX 128GB số 1 Hoa Kỳ">
+                                    <img src="../../img/home_dienthoai/7.jpg" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text" style="color: gray;font-size: 14px;">Điện Thoại iPhone XS
+                                            Max 64GB-Hàng Chính...</p>
+                                        <span><strong>28.400.000 <ins>đ </ins></strong><small> -16%</small></span>
+                                        <span style="color: gray"><small><del>33.990.000
+                                                    <ins>đ</ins></del></small></span><br>
+                                        <span class="badge badge-pill badge-secondary"><small>Trả góp 0% chỉ 2.332.500
+                                                <ins>đ</ins>/tháng</small></span>
+                                        <span>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star-half-alt"></i>
+                                            <small style="font-size: 10px; white-space: nowrap;">(80 nhận xét)</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4  col-lg-3" style="padding:0">
+                                <div class="card" data-toggle="tooltip" data-placement="top" title="Điện Thoại Iphone XSMAX 128GB số 1 Hoa Kỳ">
+                                    <img src="../../img/home_dienthoai/8.jpg" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text" style="color: gray;font-size: 14px;">Điện Thoại iPhone XS
+                                            Max 64GB-Hàng Chính...</p>
+                                        <span><strong>28.400.000 <ins>đ </ins></strong><small> -16%</small></span>
+                                        <span style="color: gray"><small><del>33.990.000
+                                                    <ins>đ</ins></del></small></span><br>
+                                        <span class="badge badge-pill badge-secondary"><small>Trả góp 0% chỉ 2.332.500
+                                                <ins>đ</ins>/tháng</small></span>
+                                        <span>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star-half-alt"></i>
+                                            <small style="font-size: 10px; white-space: nowrap;">(80 nhận xét)</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3" style="padding:0">
+                                <div class="card" data-toggle="tooltip" data-placement="top" title="Điện Thoại Iphone XSMAX 128GB số 1 Hoa Kỳ">
+                                    <img src="../../img/home_dienthoai/1.jpg" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text" style="color: gray;font-size: 14px;">Điện Thoại iPhone XS
+                                            Max 64GB-Hàng Chính...</p>
+                                        <span><strong>28.400.000 <ins>đ </ins></strong><small> -16%</small></span>
+                                        <span style="color: gray"><small><del>33.990.000
+                                                    <ins>đ</ins></del></small></span><br>
+                                        <span class="badge badge-pill badge-secondary"><small>Trả góp 0% chỉ 2.332.500
+                                                <ins>đ</ins>/tháng</small></span>
+                                        <span>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star-half-alt"></i>
+                                            <small style="font-size: 10px; white-space: nowrap;">(80 nhận xét)</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3" style="padding:0">
+                                <div class="card" data-toggle="tooltip" data-placement="top" title="Điện Thoại Iphone XSMAX 128GB số 1 Hoa Kỳ">
+                                    <img src="../../img/home_dienthoai/2.jpg" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text" style="color: gray;font-size: 14px;">Điện Thoại iPhone XS
+                                            Max 64GB-Hàng Chính...</p>
+                                        <span><strong>28.400.000 <ins>đ </ins></strong><small> -16%</small></span>
+                                        <span style="color: gray"><small><del>33.990.000
+                                                    <ins>đ</ins></del></small></span><br>
+                                        <span class="badge badge-pill badge-secondary"><small>Trả góp 0% chỉ 2.332.500
+                                                <ins>đ</ins>/tháng</small></span>
+                                        <span>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star-half-alt"></i>
+                                            <small style="font-size: 10px; white-space: nowrap;">(80 nhận xét)</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3" style="padding:0">
+                                <div class="card" data-toggle="tooltip" data-placement="top" title="Điện Thoại Iphone XSMAX 128GB số 1 Hoa Kỳ">
+                                    <img src="../../img/home_dienthoai/3.jpg" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text" style="color: gray;font-size: 14px;">Điện Thoại iPhone XS
+                                            Max 64GB-Hàng Chính...</p>
+                                        <span><strong>28.400.000 <ins>đ </ins></strong><small> -16%</small></span>
+                                        <span style="color: gray"><small><del>33.990.000
+                                                    <ins>đ</ins></del></small></span><br>
+                                        <span class="badge badge-pill badge-secondary"><small>Trả góp 0% chỉ 2.332.500
+                                                <ins>đ</ins>/tháng</small></span>
+                                        <span>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star-half-alt"></i>
+                                            <small style="font-size: 10px; white-space: nowrap;">(80 nhận xét)</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3" style="padding:0">
+                                <div class="card" data-toggle="tooltip" data-placement="top" title="Điện Thoại Iphone XSMAX 128GB số 1 Hoa Kỳ">
+                                    <img src="../../img/home_dienthoai/4.jpg" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text" style="color: gray;font-size: 14px;">Điện Thoại iPhone XS
+                                            Max 64GB-Hàng Chính...</p>
+                                        <span><strong>28.400.000 <ins>đ </ins></strong><small> -16%</small></span>
+                                        <span style="color: gray"><small><del>33.990.000
+                                                    <ins>đ</ins></del></small></span><br>
+                                        <span class="badge badge-pill badge-secondary"><small>Trả góp 0% chỉ 2.332.500
+                                                <ins>đ</ins>/tháng</small></span>
+                                        <span>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star-half-alt"></i>
+                                            <small style="font-size: 10px; white-space: nowrap;">(80 nhận xét)</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3" style="padding:0">
+                                <div class="card" data-toggle="tooltip" data-placement="top" title="Điện Thoại Iphone XSMAX 128GB số 1 Hoa Kỳ">
+                                    <img src="../../img/home_dienthoai/5.jpg" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text" style="color: gray;font-size: 14px;">Điện Thoại iPhone XS
+                                            Max 64GB-Hàng Chính...</p>
+                                        <span><strong>28.400.000 <ins>đ </ins></strong><small> -16%</small></span>
+                                        <span style="color: gray"><small><del>33.990.000
+                                                    <ins>đ</ins></del></small></span><br>
+                                        <span class="badge badge-pill badge-secondary"><small>Trả góp 0% chỉ 2.332.500
+                                                <ins>đ</ins>/tháng</small></span>
+                                        <span>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star-half-alt"></i>
+                                            <small style="font-size: 10px; white-space: nowrap;">(80 nhận xét)</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3" style="padding:0">
+                                <div class="card" data-toggle="tooltip" data-placement="top" title="Điện Thoại Iphone XSMAX 128GB số 1 Hoa Kỳ">
+                                    <img src="../../img/home_dienthoai/6.jpg" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text" style="color: gray;font-size: 14px;">Điện Thoại iPhone XS
+                                            Max 64GB-Hàng Chính...</p>
+                                        <span><strong>28.400.000 <ins>đ </ins></strong><small> -16%</small></span>
+                                        <span style="color: gray"><small><del>33.990.000
+                                                    <ins>đ</ins></del></small></span><br>
+                                        <span class="badge badge-pill badge-secondary"><small>Trả góp 0% chỉ 2.332.500
+                                                <ins>đ</ins>/tháng</small></span>
+                                        <span>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star-half-alt"></i>
+                                            <small style="font-size: 10px; white-space: nowrap;">(80 nhận xét)</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3" style="padding:0">
+                                <div class="card" data-toggle="tooltip" data-placement="top" title="Điện Thoại Iphone XSMAX 128GB số 1 Hoa Kỳ">
+                                    <img src="../../img/home_dienthoai/7.jpg" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text" style="color: gray;font-size: 14px;">Điện Thoại iPhone XS
+                                            Max 64GB-Hàng Chính...</p>
+                                        <span><strong>28.400.000 <ins>đ </ins></strong><small> -16%</small></span>
+                                        <span style="color: gray"><small><del>33.990.000
+                                                    <ins>đ</ins></del></small></span><br>
+                                        <span class="badge badge-pill badge-secondary"><small>Trả góp 0% chỉ 2.332.500
+                                                <ins>đ</ins>/tháng</small></span>
+                                        <span>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star-half-alt"></i>
+                                            <small style="font-size: 10px; white-space: nowrap;">(80 nhận xét)</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4  col-lg-3" style="padding:0">
+                                <div class="card" data-toggle="tooltip" data-placement="top" title="Điện Thoại Iphone XSMAX 128GB số 1 Hoa Kỳ">
+                                    <img src="../../img/home_dienthoai/8.jpg" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text" style="color: gray;font-size: 14px;">Điện Thoại iPhone XS
+                                            Max 64GB-Hàng Chính...</p>
+                                        <span><strong>28.400.000 <ins>đ </ins></strong><small> -16%</small></span>
+                                        <span style="color: gray"><small><del>33.990.000
+                                                    <ins>đ</ins></del></small></span><br>
+                                        <span class="badge badge-pill badge-secondary"><small>Trả góp 0% chỉ 2.332.500
+                                                <ins>đ</ins>/tháng</small></span>
+                                        <span>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star"></i>
+                                            <i style="color: #FFC120" class="fas fa-star-half-alt"></i>
+                                            <small style="font-size: 10px; white-space: nowrap;">(80 nhận xét)</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="btn-group mr-2" role="group" aria-label="First group" style="margin-left: 25%;margin-top: 30px;margin-bottom: 50px;">
+                        <button type="button" class="btn btn-primary " data-toggle="tooltip" data-placement="top" title="Trang trước"><i class="fas fa-angle-double-left"></i></button>
+                        <button type="button" class="btn btn-primary">1</button>
+                        <button type="button" class="btn btn-primary">2</button>
+                        <button type="button" class="btn btn-primary ">3</button>
+                        <button type="button" class="btn btn-primary">4</button>
+                        <button type="button" class="btn btn-primary active">5</button>
+                        <button type="button" class="btn btn-primary">6</button>
+                        <button type="button" class="btn btn-primary">7</button>
+                        <button type="button" class="btn btn-primary">8</button>
+                        <button type="button" class="btn btn-primary">9</button>
+                        <button type="button" class="btn btn-primary">10</button>
+                        <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Trang sau"><i class="fas fa-angle-double-right"></i></button>
+                    </div>
+                </div>
+
+            </div>
+    </section>
+
+    <!--------------------------------Product--------------------------------------->
+
+
+
+
+
+
+
+    <section id="section-new-letter">
+        <div class="container-fluid">
+            <div class="row" id="new-letter">
+                <div class="col-lg-2">
+                    <img class="img-fluid" src="../../icon/newsletter.png" alt="">
+                </div>
+                <div class="col-lg-4">
+                    <span>Đăng ký nhận bản tin tại đây<br><small>Đừng bỏ lỡ hàng ngàn sản phẩm và chương trình siêu hấp
+                            dẫn</small></span>
+                </div>
+                <div class="col-lg-4">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Địa chỉ email của bạn"
+                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button" id="button-addon2">Đăng ký</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-------------------------------------FOOTTER----------------------------------------------------------------->
+
+    <footer>
+        <div class="container-fluid" id="footer-containt">
+            <div class="row" id="footer-room">
+                <div class="col">
+                    <ul>
+                        <a href="#">
+                            <li style="margin-bottom:10px;"><strong>HỖ TRỢ KHÁCH HÀNG</strong></li>
+                        </a>
+                        <a href="#">
+                            <li style="color:#C4011A;font-weight: 700">Hotline đặt hàng: 1800-6963<br>
+                                <small style="color:black;">(Miễn phí,8-21h kể cả T7,CN)</small></li>
+                        </a>
+                        <a href="#">
+                            <li style="color:#C4011A;font-weight: 700">Hotline: 1900-6035<br>
+                                <small style="color:black">(1000đ/phút, 8-21h kể cả T7,CN)</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Các câu hỏi thường gặp</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Các yêu cầu hổ trợ</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Gửi yêu cầu hỗ trợ</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Hướng dẫn đặt hàng</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Phương thức vận chuyển</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Chính sách đổi trả</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Hướng dẫn mua trả góp</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Chính sách hàng nhập khẩu</small></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <a href="#">
+                            <li><strong>VỀ TIKI</strong></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Giới thiệu Tiki</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Tuyển Dụng</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Chính sách bào mật thanh toán</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Chính sách bảo mật thông tin cá nhân</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Chính sách giải quyết khiếu nại</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Điều khoản sử dụng</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Hội Sách Online</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Giới thiệu Tiki Xu</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Tiki Tư Vấn</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Bán hàng doanh nghiệp</small></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <a href="#">
+                            <li><strong>HỢP TÁC VÀ LIÊN KẾT</strong></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Quy chế hoạt động Sàn GDTMĐT</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Bán hàng cùng Tiki</small></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <a href="#">
+                            <li><strong>PHƯƠNG THỨC THANH TOÁN</strong></li>
+                        </a>
+                        <dix class="row" style="margin-top: 10px">
+                            <div class="col-lg-4 ">
+                                <img src="../../icon/phuongthucthanhtoan/1.svg" alt="">
+                            </div>
+                            <div class="col-lg-4">
+                                <img src="../../icon/phuongthucthanhtoan/2.svg" alt="">
+                            </div>
+                            <div class="col-lg-4">
+                                <img src="../../icon/phuongthucthanhtoan/3.svg" alt="">
+                            </div>
+                        </dix>
+                        <dix class="row">
+                            <div class="col-lg-4">
+                                <img src="../../icon/phuongthucthanhtoan/4.svg" alt="">
+                            </div>
+                            <div class="col-lg-4">
+                                <img src="../../icon/phuongthucthanhtoan/5.svg" alt="">
+                            </div>
+                            <div class="col-lg-4">
+                                <img src="../../icon/phuongthucthanhtoan/6.svg" alt="">
+                            </div>
+                        </dix>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <a href="#">
+                            <li><strong>KẾT NỐI VỚI CHÚNG TÔI</strong></li>
+                        </a>
+                        <dix class="row">
+                            <div class="col-lg-4">
+                                <img src="../../icon/ketnoivoichungtoi/1.svg" alt="">
+                            </div>
+                            <div class="col-lg-4">
+                                <img src="../../icon/ketnoivoichungtoi/2.svg" alt="">
+                            </div>
+                            <div class="col-lg-4">
+                                <img src="../../icon/ketnoivoichungtoi/3.svg" alt="">
+                            </div>
+                        </dix>
+                    </ul>
+                    <ul>
+                        <a href="#">
+                            <li><strong>TẢI ỨNG DỤNG TRÊN ĐIỆN THOẠI</strong></li>
+                        </a>
+                        <div class="row">
+                            <a href="#"><img
+                                    style="max-height: 40px;margin-top:16px;margin-left: 15px;margin-bottom: 8px;"
+                                    src="../../icon/tải xuống.png" class="img-fluid" alt=""></a>
+                        </div>
+                        <div class="row">
+                            <a href="#"> <img style="max-height: 40px;margin-left: 15px;"
+                                    src="../../icon/tải xuống (2).png" class="img-fluid" alt=""></a>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row" style="margin-bottom: 30px;margin-top:80px;">
+                <div class="col-lg-6">
+                    <span>
+                        <small>
+                            Địa chỉ văn phòng: 52 Út Tịch, phường 4, quận Tân Bình, thành phố Hồ Chí Minh
+                            <br>Tiki nhận đặt hàng trực tuyến và giao hàng tận nơi, chưa hỗ trợ mua và nhận hàng trực
+                            tiếp tại văn
+                            <br>phòng hoặc trung tâm xử lý đơn hàng
+                        </small>
+                    </span>
+                </div>
+                <div class="col-lg-6">
+                    <span>
+                        <small>
+                            Địa chỉ gửi hàng đổi/trả/bảo hành: Trung tâm xử lý đơn hàng TIKI - Hẻm số 717, đường Tân
+                            <br>Sơn, Phường 12, Quận Gò Vấp, TP. Hồ Chí Minh
+                            <br>(Tham khảo <a href="#">hướng dẫn đổi, trả, bảo hành</a> hoặc liên hệ 1900-6035 để được
+                            hướng
+                            dẫn thêm)
+                        </small>
+                    </span>
+                </div>
+            </div>
+
+            <div class="row" style="margin-bottom: 15px;">
+                <span>
+                    <small><strong>© 2016 - Bản quyền của Công Ty Cổ Phần Ti Ki - Tiki.vn<br></strong></small>
+                    <span><small>Giấy chứng nhận Đăng ký Kinh doanh số 0309532909 do Sở Kế hoạch và Đầu tư Thành phố Hồ
+                            Chí Minh cấp ngày 06/01/2010</small></span>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>

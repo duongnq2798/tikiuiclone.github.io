@@ -1,0 +1,407 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*=============== FONT ================*/
+/*=============== COLOR================*/
+/*=============== BACKGROUND ================*/
+body {
+  background: #F4F4F4;
+}
+body #img-body-left {
+  position: absolute;
+  z-index: -20;
+  top: 50%;
+  left: 0%;
+  width: 50px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+body #img-body-right {
+  position: absolute;
+  z-index: -20;
+  top: 50%;
+  width: 50px;
+  right: 0%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/*icom sroll to top*/
+.scrolltop {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #1D71AB;
+  position: absolute;
+  z-index: 5000;
+  right: 20px;
+  bottom: 20px;
+  position: fixed;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #189AFF;
+  display: none;
+}
+.scrolltop:hover {
+  background-color: black;
+  transition: 0.6s;
+}
+.scrolltop .scroll i {
+  text-align: center;
+  margin-top: 20%;
+  margin-left: 30%;
+  font-size: 2em;
+  animation: animation-scroll 0.5s infinite alternate;
+  color: #fff;
+}
+
+@keyframes animation-scroll {
+  from {
+    margin-top: 20%;
+  }
+  to {
+    margin-top: -5%;
+  }
+}
+/*--------------------------------------Modal-------------------------------------------------*/
+/*========================================================================================*/
+.my-row {
+  width: 100%;
+}
+.my-row a img {
+  width: 100%;
+  height: 50px;
+}
+
+/*----------------------------------------------------------------------------------------*/
+.my-row-nav-1 {
+  width: 100%;
+}
+.my-row-nav-1 #navbar-1 {
+  max-height: 35px;
+  background: #1D71AB;
+}
+.my-row-nav-1 #navbar-1 button {
+  max-height: 30px;
+  margin-top: -1%;
+}
+.my-row-nav-1 #navbar-1 button span {
+  font-size: 13px;
+}
+.my-row-nav-1 #navbar-1 div ul {
+  margin-left: 100px;
+}
+.my-row-nav-1 #navbar-1 div ul li {
+  padding-right: 20px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.my-row-nav-1 #navbar-1 div ul li a {
+  color: #ffff;
+}
+.my-row-nav-1 #navbar-1 div ul li a:hover {
+  color: #C3C3C3;
+}
+.my-row-nav-1 #navbar-1 div ul li a i {
+  color: #FAD556;
+}
+
+/*----------------------------------------------------------------------------------------*/
+#container-section-3 {
+  background: #189AFF;
+  padding-top: 20px;
+}
+#container-section-3 .my-row-sec-3 {
+  margin-left: 20px;
+  margin-right: 20px;
+  white-space: nowrap;
+}
+#container-section-3 .my-row-sec-3 div {
+  min-height: 40px;
+}
+#container-section-3 .my-row-sec-3 div div div {
+  position: relative;
+  cursor: pointer;
+}
+#container-section-3 .my-row-sec-3 div div div #modal-login-account {
+  position: absolute;
+  z-index: 88;
+  min-width: 230px;
+  left: -70%;
+  top: 100%;
+  background: #F4F4F4;
+  border-radius: 6px;
+  display: none;
+}
+#container-section-3 .my-row-sec-3 div div div #modal-login-account button {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 3%;
+  margin-bottom: 2%;
+}
+#container-section-3 .my-row-sec-3 div div:hover #modal-login-account {
+  display: block;
+}
+#container-section-3 .my-row-sec-3 div img {
+  margin-top: 5px;
+}
+#container-section-3 .my-row-sec-3 div #sec-3-1 {
+  background-color: #189AFF;
+}
+#container-section-3 .my-row-sec-3 div button {
+  color: #ffff;
+  letter-spacing: 1px;
+}
+#container-section-3 .my-row-sec-3 div button span i {
+  color: #ffff;
+  margin-right: 5px;
+}
+#container-section-3 .my-row-sec-3 div div div {
+  position: relative;
+}
+#container-section-3 .my-row-sec-3 div div div p {
+  position: absolute;
+  left: 25%;
+  top: 20%;
+  color: #ffff;
+}
+#container-section-3 .my-row-sec-3 div div div span {
+  font-size: 12px;
+  white-space: nowrap;
+  color: #ffff;
+  letter-spacing: 0.9px;
+  position: absolute;
+  left: 5%;
+}
+#container-section-3 .my-row-sec-3-2 {
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+#container-section-3 .my-row-sec-3-2 div {
+  min-height: 40px;
+}
+#container-section-3 .my-row-sec-3-2 div div div {
+  position: relative;
+}
+#container-section-3 .my-row-sec-3-2 div div div p {
+  position: absolute;
+  left: -5%;
+  top: 20%;
+  white-space: nowrap;
+  font-size: 12px;
+  color: #ffff;
+  letter-spacing: 0.6px;
+  font-weight: 300;
+  cursor: pointer;
+}
+#container-section-3 .my-row-sec-3-2 div div div p:hover {
+  color: #f7f7f7;
+}
+#container-section-3 .my-row-sec-3-2 div div div #danhmucsanpham {
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 0.6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#container-section-3 .my-row-sec-3-2 div div div #text-ab-2 {
+  position: absolute;
+  top: 0%;
+  font-size: 13px;
+}
+#container-section-3 .my-row-sec-3-2 div div div span i {
+  color: #ffff;
+  font-size: 1.5em;
+  margin-top: 5px;
+}
+#container-section-3 .my-row-sec-3-2 div div:hover i {
+  color: #1D71AB;
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+/***************************************Product**********************************************/
+#list-item-cus-left:hover {
+  background: #189AFF;
+}
+#list-item-cus-left:hover p {
+  color: #fff;
+}
+#list-item-cus-left:hover span i {
+  color: #fff;
+}
+
+/********************************************************************************************/
+#section-product {
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 15px;
+}
+#section-product #danhsachsanpham #col-left-product {
+  background-color: #fff;
+}
+#section-product #danhsachsanpham #col-left-product p {
+  white-space: nowrap;
+  font-size: 15px;
+  font-weight: 600;
+}
+#section-product #danhsachsanpham #col-left-product ul {
+  list-style-type: none;
+  border-bottom: 1px solid #C3C3C3;
+  padding-bottom: 15px;
+}
+#section-product #danhsachsanpham #col-left-product ul a {
+  text-decoration: none;
+}
+#section-product #danhsachsanpham #col-left-product ul a li {
+  font-size: 15px;
+  white-space: nowrap;
+  color: black;
+  margin-left: 15px;
+}
+#section-product #danhsachsanpham #col-left-product ul a li:hover {
+  color: #B8B8B8;
+}
+#section-product #danhsachsanpham #col-left-product ul a span {
+  color: #189AFF;
+}
+#section-product #danhsachsanpham #col-left-product ul span {
+  white-space: nowrap;
+}
+#section-product #danhsachsanpham #col-left-product ul span i {
+  color: #B8B8B8;
+}
+#section-product #danhsachsanpham #col-left-product ul span span {
+  font-size: 12px;
+}
+#section-product #danhsachsanpham #col-right-product {
+  padding: 0;
+  background: #ffff;
+}
+#section-product #danhsachsanpham #col-right-product #banner-1 {
+  height: 300px;
+}
+#section-product #danhsachsanpham #col-right-product #banner-2 {
+  padding-top: 60px;
+}
+#section-product #danhsachsanpham #col-right-product #banner-2 div img {
+  width: 100%;
+  max-height: 150px;
+  margin-top: 10px;
+}
+#section-product #danhsachsanpham #col-right-product #banner-3 {
+  padding-top: 20px;
+}
+#section-product #danhsachsanpham #col-right-product #banner-3 img {
+  width: 100%;
+}
+#section-product #danhsachsanpham #col-right-product #banner-4 img {
+  width: 100%;
+  padding-top: 20px;
+  padding-left: 40px;
+}
+#section-product #danhsachsanpham #col-right-product #navba-product {
+  margin-left: 40px;
+  width: 90%;
+}
+#section-product #danhsachsanpham #col-right-product #navba-product .col-md-1 {
+  position: relative;
+  padding: 0;
+  cursor: pointer;
+}
+#section-product #danhsachsanpham #col-right-product #navba-product .col-md-1 span {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  white-space: nowrap;
+  font-size: 13px;
+  border-bottom: 2px solid #fff;
+  font-weight: 500;
+  text-align: center;
+  color: #5D5D5D;
+}
+#section-product #danhsachsanpham #col-right-product #navba-product .col-md-1:hover {
+  color: #189AFF;
+  border-bottom: 2px solid #189AFF;
+}
+#section-product #danhsachsanpham #col-right-product #navba-product .col-md-1:hover span {
+  color: #189AFF;
+  font-weight: 800;
+}
+
+/*----------------------------------------------------------------------------------------------*/
+#blood-row {
+  margin-left: 40px;
+  width: 90%;
+}
+#blood-row .col-lg-3 {
+  cursor: pointer;
+}
+#blood-row .col-lg-3:hover {
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+#blood-row .col-lg-3:hover img {
+  animation: animate-blood-row 0.8s alternate forwards;
+}
+
+@keyframes animate-blood-row {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+/*----------------------------------------------------------------------*/
+#section-new-letter {
+  margin-top: 10px;
+  margin-bottom: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+#section-new-letter #new-letter {
+  background: #f7f7f7;
+  height: 160px;
+}
+#section-new-letter #new-letter:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px 0px;
+}
+#section-new-letter #new-letter div {
+  position: relative;
+}
+#section-new-letter #new-letter div img {
+  margin-top: 12%;
+}
+#section-new-letter #new-letter div span {
+  white-space: nowrap;
+  position: absolute;
+  top: 35%;
+  font-weight: 700;
+}
+#section-new-letter #new-letter div .input-group {
+  position: absolute;
+  top: 45%;
+}
+
+/*--------------------------------------Footer---------------------------------------------*/
+#footer-containt {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+#footer-containt #footer-room div ul {
+  list-style-type: none;
+}
+#footer-containt #footer-room div ul a {
+  text-decoration: none;
+  color: black;
+}
+#footer-containt #footer-room div ul a li {
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=productdetail.css.map */

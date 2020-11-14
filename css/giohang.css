@@ -1,0 +1,361 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*=============== FONT ================*/
+/*=============== COLOR================*/
+/*=============== BACKGROUND ================*/
+body {
+  background: #F4F4F4;
+}
+body #img-body-left {
+  position: absolute;
+  z-index: -20;
+  top: 50%;
+  left: 0%;
+  width: 50px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+body #img-body-right {
+  position: absolute;
+  z-index: -20;
+  top: 50%;
+  width: 50px;
+  right: 0%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/*icom sroll to top*/
+.scrolltop {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #1D71AB;
+  position: absolute;
+  z-index: 5000;
+  right: 20px;
+  bottom: 20px;
+  position: fixed;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #189AFF;
+  display: none;
+}
+.scrolltop:hover {
+  background-color: black;
+  transition: 0.6s;
+}
+.scrolltop .scroll i {
+  text-align: center;
+  margin-top: 20%;
+  margin-left: 30%;
+  font-size: 2em;
+  animation: animation-scroll 0.5s infinite alternate;
+  color: #fff;
+}
+
+@keyframes animation-scroll {
+  from {
+    margin-top: 20%;
+  }
+  to {
+    margin-top: -5%;
+  }
+}
+/*--------------------------------------Modal-------------------------------------------------*/
+/*========================================================================================*/
+.my-row {
+  width: 100%;
+}
+.my-row a img {
+  width: 100%;
+  height: 50px;
+}
+
+/*----------------------------------------------------------------------------------------*/
+.my-row-nav-1 {
+  width: 100%;
+}
+.my-row-nav-1 #navbar-1 {
+  max-height: 35px;
+  background: #1D71AB;
+}
+.my-row-nav-1 #navbar-1 button {
+  max-height: 30px;
+  margin-top: -1%;
+}
+.my-row-nav-1 #navbar-1 button span {
+  font-size: 13px;
+}
+.my-row-nav-1 #navbar-1 div ul {
+  margin-left: 100px;
+}
+.my-row-nav-1 #navbar-1 div ul li {
+  padding-right: 20px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.my-row-nav-1 #navbar-1 div ul li a {
+  color: #ffff;
+}
+.my-row-nav-1 #navbar-1 div ul li a:hover {
+  color: #C3C3C3;
+}
+.my-row-nav-1 #navbar-1 div ul li a i {
+  color: #FAD556;
+}
+
+/*----------------------------------------------------------------------------------------*/
+#container-section-3 {
+  background: #189AFF;
+  padding-top: 20px;
+}
+#container-section-3 .my-row-sec-3 {
+  margin-left: 20px;
+  margin-right: 20px;
+  white-space: nowrap;
+}
+#container-section-3 .my-row-sec-3 div {
+  min-height: 40px;
+}
+#container-section-3 .my-row-sec-3 div div div {
+  position: relative;
+  cursor: pointer;
+}
+#container-section-3 .my-row-sec-3 div div div #modal-login-account {
+  position: absolute;
+  z-index: 88;
+  min-width: 230px;
+  left: -70%;
+  top: 100%;
+  background: #F4F4F4;
+  border-radius: 6px;
+  display: none;
+}
+#container-section-3 .my-row-sec-3 div div div #modal-login-account button {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 3%;
+  margin-bottom: 2%;
+}
+#container-section-3 .my-row-sec-3 div div:hover #modal-login-account {
+  display: block;
+}
+#container-section-3 .my-row-sec-3 div img {
+  margin-top: 5px;
+}
+#container-section-3 .my-row-sec-3 div #sec-3-1 {
+  background-color: #189AFF;
+}
+#container-section-3 .my-row-sec-3 div button {
+  color: #ffff;
+  letter-spacing: 1px;
+}
+#container-section-3 .my-row-sec-3 div button span i {
+  color: #ffff;
+  margin-right: 5px;
+}
+#container-section-3 .my-row-sec-3 div .giohang {
+  width: 300px;
+  height: 100px;
+  background: #ffffff;
+  box-shadow: 1px 1px 15px #b3b3b3;
+  border-radius: 6px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  position: absolute;
+  z-index: 6000;
+  top: 127%;
+  left: -48%;
+}
+#container-section-3 .my-row-sec-3 div .giohang p {
+  margin-left: 20px;
+  margin-top: 10px;
+  letter-spacing: 0.6px;
+}
+#container-section-3 .my-row-sec-3 div .giohang p i {
+  color: green;
+}
+#container-section-3 .my-row-sec-3 div .giohang button {
+  width: 87%;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 14px;
+}
+#container-section-3 .my-row-sec-3 div .giohang span {
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  top: 2%;
+  right: 5%;
+  cursor: pointer;
+}
+#container-section-3 .my-row-sec-3 div .giohang .fa-caret-up {
+  font-size: 2em;
+  color: #ffff;
+  position: absolute;
+  top: -18%;
+  left: 89%;
+}
+#container-section-3 .my-row-sec-3 div div div {
+  position: relative;
+}
+#container-section-3 .my-row-sec-3 div div div p {
+  position: absolute;
+  left: 25%;
+  top: 20%;
+  color: #ffff;
+}
+#container-section-3 .my-row-sec-3 div div div span {
+  font-size: 12px;
+  white-space: nowrap;
+  color: #ffff;
+  letter-spacing: 0.9px;
+  position: absolute;
+  left: 5%;
+}
+#container-section-3 .my-row-sec-3-2 {
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+#container-section-3 .my-row-sec-3-2 div {
+  min-height: 40px;
+}
+#container-section-3 .my-row-sec-3-2 div div div {
+  position: relative;
+}
+#container-section-3 .my-row-sec-3-2 div div div p {
+  position: absolute;
+  left: -5%;
+  top: 20%;
+  white-space: nowrap;
+  font-size: 12px;
+  color: #ffff;
+  letter-spacing: 0.6px;
+  font-weight: 300;
+  cursor: pointer;
+}
+#container-section-3 .my-row-sec-3-2 div div div p:hover {
+  color: #f7f7f7;
+}
+#container-section-3 .my-row-sec-3-2 div div div #danhmucsanpham {
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 0.6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#container-section-3 .my-row-sec-3-2 div div div #text-ab-2 {
+  position: absolute;
+  top: 0%;
+  font-size: 13px;
+}
+#container-section-3 .my-row-sec-3-2 div div div span i {
+  color: #ffff;
+  font-size: 1.5em;
+  margin-top: 5px;
+}
+#container-section-3 .my-row-sec-3-2 div div:hover i {
+  color: #1D71AB;
+  cursor: pointer;
+  transition: 0.7s;
+}
+#container-section-3 .my-row-sec-3-2 div div:hover i {
+  color: #1D71AB;
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+/***************************************Product**********************************************/
+#list-item-cus-left:hover {
+  background: #189AFF;
+}
+#list-item-cus-left:hover p {
+  color: #fff;
+}
+#list-item-cus-left:hover span i {
+  color: #fff;
+}
+
+/*********************************Prodcuct-Content***********************************************************/
+#section7-1 {
+  margin-top: 10px;
+  margin-bottom: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+#section7-1 #section-7-giohang .alert-tin span {
+  color: black;
+}
+#section7-1 #section-7-giohang .alert-tin button {
+  background-color: #F4F4F4;
+  border: 1px solid #EDC200;
+}
+
+/************************************************************************************************************/
+#section-8 {
+  margin-top: 10px;
+  margin-bottom: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+#section-8 #section-8-sanpham {
+  width: 100%;
+  border: 1px solid red;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+/*----------------------------------------------------------------------*/
+#section-new-letter {
+  margin-top: 10px;
+  margin-bottom: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+#section-new-letter #new-letter {
+  background: #f7f7f7;
+  height: 160px;
+}
+#section-new-letter #new-letter:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px 0px;
+}
+#section-new-letter #new-letter div {
+  position: relative;
+}
+#section-new-letter #new-letter div img {
+  margin-top: 12%;
+}
+#section-new-letter #new-letter div span {
+  white-space: nowrap;
+  position: absolute;
+  top: 35%;
+  font-weight: 700;
+}
+#section-new-letter #new-letter div .input-group {
+  position: absolute;
+  top: 45%;
+}
+
+/*--------------------------------------Footer---------------------------------------------*/
+#footer-containt {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+#footer-containt #footer-room div ul {
+  list-style-type: none;
+}
+#footer-containt #footer-room div ul a {
+  text-decoration: none;
+  color: black;
+}
+#footer-containt #footer-room div ul a li {
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=giohang.css.map */

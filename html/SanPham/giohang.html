@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="../../icon/logo001.png">
+    <link rel="stylesheet" href="../../css/giohang.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="../../bootstrap/jquery-3.0.0.js"></script>
+    <script src="../../bootstrap/popper.min.js"></script>
+    <script src="../../bootstrap/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+
+    <script src="../../jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../../js/home.js"></script>
+
+    <title>Giỏ hàng | Sản phẩm</title>
+
+</head>
+
+<body>
+
+    <div class='thetop'></div>
+    <div class='scrolltop'>
+        <div class='scroll icon'><i class="fa fa-4x fa-angle-up"></i></div>
+    </div>
+
+    <!--Modal đăng nhập-->
+    <div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true" data-backdrop="false">
+        <div class="modal-dialog modal-lg" role="document" id="pattient-1">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel" style="color:#1BA8FF">Đăng nhập</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row" id="col-left-modal-detail">
+                        <div class="col-lg-4">
+                            <span>Đăng nhập để theo dõi đơn hàng, lưu
+                                danh sách sản phẩm yêu thích, nhận
+                                nhiều ưu đãi hấp dẫn</span>
+                            <img src="../../icon/modal/1.png" alt="">
+                        </div>
+                        <div class="col-lg-8" style="border: 15px solid #F4F4F4;padding-top: 20px">
+                            <form>
+                                <div class="form-group row">
+                                    <label for="staticEmail" class="col-sm-2 col-form-label">Email/SĐT</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="formGroupExampleInput"
+                                            placeholder="Nhập Email hoặc Số Điện Thoại">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputPassword" class="col-sm-2 col-form-label"
+                                        style="white-space: nowrap;">Mật
+                                        khẩu</label>
+                                    <div class="col-sm-10">
+                                        <input type="password" class="form-control" id="inputPassword"
+                                            placeholder="Password từ 16 đến 32 ký tự">
+                                    </div>
+                                </div>
+                            </form>
+                            <span><small>Quên mật khẩu? Nhấn vào <a href="#">đây</a></small></span>
+                            <div class="row" style="width: 80%;margin-left:10%;margin-top: 3%;">
+                                <button type="button" class="btn btn-primary btn-block">
+                                    <i class="fab fa-facebook-f"></i><small> Đăng nhập bằng Facebook</small>
+                                </button>
+                            </div>
+                            <div class="row" style="width: 80%;margin-left:10%;margin-top: 3%;">
+                                <button type="button" class="btn btn-danger btn-block">
+                                    <i class="fab fa-google-plus-g"></i><small> Đăng nhập bằng Google</small>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Quay lại</button>
+                    <button type="button" class="btn btn-primary" >Đăng Nhập</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal Tạo Tài Khoản-->
+    <div class="modal fade" id="exampleModal02" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true" data-backdrop="false">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel" style="color:#1BA8FF">Tạo tài khoản</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <span>Đăng nhập để theo dõi đơn hàng, lưu
+                                danh sách sản phẩm yêu thích, nhận
+                                nhiều ưu đãi hấp dẫn</span>
+                            <img src="../../icon/modal/1.png" alt="">
+                        </div>
+                        <div class="col-lg-8" style="border: 15px solid #F4F4F4;padding-top: 20px">
+                            <form>
+                                <div class="form-group row">
+                                    <label for="staticEmail" class="col-sm-2 col-form-label"><small>Họ
+                                            tên</small></label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control form-control-sm "
+                                            id="formGroupExampleInput" placeholder="Nhập họ tên">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticEmail"
+                                        class="col-sm-2 col-form-label"><small>Email</small></label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control form-control-sm "
+                                            id="formGroupExampleInput" placeholder="Nhập Số Điện Thoại">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticEmail" class="col-sm-2 col-form-label"><small
+                                            style="white-space: nowrap">Mã xác thực</small></label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control form-control-sm "
+                                            id="formGroupExampleInput"
+                                            placeholder="Nhập mã xác thực gửi đến số điện thoại trên">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticEmail"
+                                        class="col-sm-2 col-form-label"><small>Email</small></label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control form-control-sm "
+                                            id="formGroupExampleInput" placeholder="Nhập email">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputPassword" class="col-sm-2 col-form-label"><small>Mật
+                                            khẩu</small></label>
+                                    <div class="col-sm-10">
+                                        <input type="password" class="form-control form-control-sm" id="inputPassword"
+                                            placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputPassword" class="col-sm-2 col-form-label"
+                                        style="white-space: nowrap"><small>Giới tính</small></label>
+                                    <div style="margin-left: 17px">
+                                        <label for="radio-1"><small>Nam</small></label>
+                                        <input class="radiopick" type="radio" name="radio-1" id="radio-1">
+                                        <label for="radio-2"><small>Nữ</small></label>
+                                        <input class="radiopick" type="radio" name="radio-1" id="radio-2">
+                                        <label for="radio-3"><small>Khác</small></label>
+                                        <input class="radiopick" type="radio" name="radio-1" id="radio-3">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-lg-2" style="padding: 0;">
+                                        <label for="inputPassword" class="col-sm-2 col-form-label"
+                                            style="white-space: nowrap;"><small>Ngày sinh</small></label>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                            <option selected>Ngày</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                            <option selected>Tháng</option>
+                                            <option value="1">1</option>
+                                            <option value="2">1</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                            <option selected>Năm</option>
+                                            <option value="1">1</option>
+                                            <option value="2">1</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="custom-control custom-checkbox mr-sm-2">
+                                    <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                                    <label class="custom-control-label" for="customControlAutosizing"
+                                        style="font-size: 13px;margin-left: 20%;margin-bottom:20px">Nhận các thông tin
+                                        và chương trình khuyến mãi của Tiki qua email</label>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-block">Tạo tài khoản</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!---------------------------------------------------------------------------------------->
+
+    <header>
+        <div class="my-row">
+            <a href="#"><img src="../../img/home_Quang_cao/0.png" alt="Giảm 40%"></a>
+        </div>
+    </header>
+
+    <section>
+        <div class=" my-row-nav-1">
+            <nav class="navbar navbar-expand-sm navbar-light  container-fluid" id="navbar-1">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto ">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#"><i class="fab fa-chrome"></i> Trợ lý Tiki </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-bell"></i> Ưu đãi đối tác</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-gifts"></i> Phiếu quà tặng</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#"><i class="fas fa-building"></i> Đặt khách sạn </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-fighter-jet"></i> Đặt vé máy bay</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-bolt"></i> Săn hàng tồn</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#"><i class="fas fa-fire-alt"></i> Khuyến Mãi HOT </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-globe"></i> Hàng quốc tế</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-hand-holding-usd"></i> Bán hàng cùng Tiki</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container-fluid" id="container-section-3">
+            <div class="row my-row-sec-3 ">
+                <div class="col-xs-6 col-sm-2 col-md-2 col-lg-1 d-none d-md-block">
+                    <a href="home.html"><img src="../../icon/tikinow.png" class="img-fluid "></a>
+                </div>
+                <div class="col-xs-6 col-sm-10 col-md-10 col-lg-6 d-none d-md-block">
+                    <div class="input-group ">
+                        <input type="text" class="form-control"
+                            placeholder="Tìm sản phẩm, danh mục hay thương hiệu mong muốn ..."
+                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-secondary " type="button" id="button-addon2">Tìm kiếm</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-1 d-none d-md-block">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p><i class="fas fa-box"></i></p>
+                        </div>
+                        <div class="col-md-8"><span>Theo dõi<br>đơn hàng</span></div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-1 d-none d-md-block">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p><i class="fas fa-bell"></i></p>
+                        </div>
+                        <div class="col-md-8"><span>Thông báo<br>của tôi</span></div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-1 d-none d-md-block">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p><i class="fas fa-user"></i></p>
+                        </div>
+                        <div class="col-md-8" id="modal-login-account-just"><span>Đăng nhập<br><small>Tài
+                                    khoản</small></span>
+                            <div id="modal-login-account">
+                                <div class="row">
+                                    <button type="button" class="btn btn-warning" data-toggle="modal"
+                                        data-target="#exampleModal">Đăng Nhập</button>
+                                </div>
+                                <div class="row">
+                                    <button type="button" class="btn btn-warning" data-toggle="modal"
+                                        data-target="#exampleModal02">Tạo Tài Khoản</button>
+                                </div>
+                                <div class="row">
+                                    <button type="button" class="btn btn-primary"><i
+                                            class="fab fa-facebook-f"></i><small> Đăng nhập bằng
+                                            Facebook</small></button>
+                                </div>
+                                <div class="row">
+                                    <button type="button" class="btn btn-danger"><i
+                                            class="fab fa-google-plus-g"></i><small> Đăng nhập bằng
+                                            Gmail</small></button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2 d-none d-md-block">
+                    <button id="sec-3-1" type="button" class="btn btn-light btn-block  btn-md"  onclick="openForm()">
+                        <span><i class="fas fa-shopping-cart"></i></span>
+                        Giỏ hàng
+                    </button>
+                    <div class="giohang" id="myForm" style="display: none;">
+                        <p><i class="far fa-check-circle"></i> Thêm vào giỏ hàng thành công!</p>
+                        <button type="button" class="btn btn-danger btn-block " style="background: #FF3945">Xem giỏ hàng và thanh toán</button>
+                        <span onclick="closeForm()">x</span>
+                        <i class="fas fa-caret-up"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row my-row-sec-3-2">
+                <div class="col-md-4 col-lg-2 ">
+                    <div class="row ">
+                        <div class="col-md-3   ">
+                            <span><i class="fas fa-bars"></i></span>
+                        </div>
+                        <div class="col-md-9 ">
+                            <p id="danhmucsanpham">
+                                DANH MỤC SẢN PHẨM
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2 d-none d-md-block">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <span><i class="fas fa-map-marker-alt"></i></span>
+                        </div>
+                        <div class="col-md-9">
+                            <p>Bạn muốn giao hàng tới đâu?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2 d-none d-md-block">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <span><i class="fas fa-angle-down"></i></span>
+                        </div>
+                        <div class="col-md-9">
+                            <p style="font-size: 13px;">Sản phẩm bạn đã xem</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2 d-none d-md-block">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <span><i class="fab fa-gg-circle"></i></span>
+                        </div>
+                        <div class="col-md-9">
+                            <p id="text-ab-2">TiKiNOW giao nhanh <br><small>Hàng trăm nghìn sảm phẩm</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2 d-none d-md-block">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <span><i class="fab fa-gg-circle"></i></span>
+                        </div>
+                        <div class="col-md-9">
+                            <p id="text-ab-2">Tất cả sản phẩm tại đây<br>100% chính hiệu</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2 d-none d-md-block">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <span><i class="fab fa-gg-circle"></i></span>
+                        </div>
+                        <div class="col-md-9">
+                            <p>30 ngày đổi trả đễ dàng</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+<!--------------------------------------------------------------------------------------------------------------->
+<section id="section7-1">
+    <div class="container-fluid" id="section-7-giohang">
+        <div class="alert-tin">
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <span>Bạn ơi hãy chọn địa chỉ nhận hàng để xem sản phẩm nào có hỗ trợ TikiNOW giao nhanh - <a href="#">Nhập địa chỉ</a> </span>
+                <button type="button" class="close btn-block" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true" style="margin-left: 80%"></span>
+                </button>
+              </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="section-8">
+    <div class="container-fluid" id="section-8-sanpham">
+        <div class="row" id="rowsanpham">
+        </div>
+    </div>
+</section>
+ <!--*******************************************************************************-->
+    <section id="section-new-letter">
+        <div class="container-fluid">
+            <div class="row" id="new-letter">
+                <div class="col-lg-2">
+                    <img class="img-fluid" src="../../icon/newsletter.png" alt="">
+                </div>
+                <div class="col-lg-4">
+                    <span>Đăng ký nhận bản tin tại đây<br><small>Đừng bỏ lỡ hàng ngàn sản phẩm và chương trình siêu hấp
+                            dẫn</small></span>
+                </div>
+                <div class="col-lg-4">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Địa chỉ email của bạn"
+                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button" id="button-addon2">Button</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-------------------------------------FOOTTER----------------------------------------------------------------->
+
+    <footer>
+        <div class="container-fluid" id="footer-containt">
+            <div class="row" id="footer-room">
+                <div class="col">
+                    <ul>
+                        <a href="#">
+                            <li style="margin-bottom:10px;"><strong>HỖ TRỢ KHÁCH HÀNG</strong></li>
+                        </a>
+                        <a href="#">
+                            <li style="color:#C4011A;font-weight: 700">Hotline đặt hàng: 1800-6963<br>
+                                <small style="color:black;">(Miễn phí,8-21h kể cả T7,CN)</small></li>
+                        </a>
+                        <a href="#">
+                            <li style="color:#C4011A;font-weight: 700">Hotline: 1900-6035<br>
+                                <small style="color:black">(1000đ/phút, 8-21h kể cả T7,CN)</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Các câu hỏi thường gặp</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Các yêu cầu hổ trợ</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Gửi yêu cầu hỗ trợ</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Hướng dẫn đặt hàng</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Phương thức vận chuyển</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Chính sách đổi trả</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Hướng dẫn mua trả góp</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Chính sách hàng nhập khẩu</small></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <a href="#">
+                            <li><strong>VỀ TIKI</strong></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Giới thiệu Tiki</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Tuyển Dụng</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Chính sách bào mật thanh toán</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Chính sách bảo mật thông tin cá nhân</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Chính sách giải quyết khiếu nại</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Điều khoản sử dụng</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Hội Sách Online</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Giới thiệu Tiki Xu</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Tiki Tư Vấn</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Bán hàng doanh nghiệp</small></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <a href="#">
+                            <li><strong>HỢP TÁC VÀ LIÊN KẾT</strong></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Quy chế hoạt động Sàn GDTMĐT</small></li>
+                        </a>
+                        <a href="#">
+                            <li><small>Bán hàng cùng Tiki</small></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <a href="#">
+                            <li><strong>PHƯƠNG THỨC THANH TOÁN</strong></li>
+                        </a>
+                        <dix class="row" style="margin-top: 10px">
+                            <div class="col-lg-4 ">
+                                <img src="../../icon/phuongthucthanhtoan/1.svg" alt="">
+                            </div>
+                            <div class="col-lg-4">
+                                <img src="../../icon/phuongthucthanhtoan/2.svg" alt="">
+                            </div>
+                            <div class="col-lg-4">
+                                <img src="../../icon/phuongthucthanhtoan/3.svg" alt="">
+                            </div>
+                        </dix>
+                        <dix class="row">
+                            <div class="col-lg-4">
+                                <img src="../../icon/phuongthucthanhtoan/4.svg" alt="">
+                            </div>
+                            <div class="col-lg-4">
+                                <img src="../../icon/phuongthucthanhtoan/5.svg" alt="">
+                            </div>
+                            <div class="col-lg-4">
+                                <img src="../../icon/phuongthucthanhtoan/6.svg" alt="">
+                            </div>
+                        </dix>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <a href="#">
+                            <li><strong>KẾT NỐI VỚI CHÚNG TÔI</strong></li>
+                        </a>
+                        <dix class="row">
+                            <div class="col-lg-4">
+                                <img src="../../icon/ketnoivoichungtoi/1.svg" alt="">
+                            </div>
+                            <div class="col-lg-4">
+                                <img src="../../icon/ketnoivoichungtoi/2.svg" alt="">
+                            </div>
+                            <div class="col-lg-4">
+                                <img src="../../icon/ketnoivoichungtoi/3.svg" alt="">
+                            </div>
+                        </dix>
+                    </ul>
+                    <ul>
+                        <a href="#">
+                            <li><strong>TẢI ỨNG DỤNG TRÊN ĐIỆN THOẠI</strong></li>
+                        </a>
+                        <div class="row">
+                            <a href="#"><img
+                                    style="max-height: 40px;margin-top:16px;margin-left: 15px;margin-bottom: 8px;"
+                                    src="../../icon/tải xuống.png" class="img-fluid" alt=""></a>
+                        </div>
+                        <div class="row">
+                            <a href="#"> <img style="max-height: 40px;margin-left: 15px;"
+                                    src="../../icon/tải xuống (2).png" class="img-fluid" alt=""></a>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row" style="margin-bottom: 30px;margin-top:80px;">
+                <div class="col-lg-6">
+                    <span>
+                        <small>
+                            Địa chỉ văn phòng: 52 Út Tịch, phường 4, quận Tân Bình, thành phố Hồ Chí Minh
+                            <br>Tiki nhận đặt hàng trực tuyến và giao hàng tận nơi, chưa hỗ trợ mua và nhận hàng trực
+                            tiếp tại văn
+                            <br>phòng hoặc trung tâm xử lý đơn hàng
+                        </small>
+                    </span>
+                </div>
+                <div class="col-lg-6">
+                    <span>
+                        <small>
+                            Địa chỉ gửi hàng đổi/trả/bảo hành: Trung tâm xử lý đơn hàng TIKI - Hẻm số 717, đường Tân
+                            <br>Sơn, Phường 12, Quận Gò Vấp, TP. Hồ Chí Minh
+                            <br>(Tham khảo <a href="#">hướng dẫn đổi, trả, bảo hành</a> hoặc liên hệ 1900-6035 để được
+                            hướng
+                            dẫn thêm)
+                        </small>
+                    </span>
+                </div>
+            </div>
+
+            <div class="row" style="margin-bottom: 15px;">
+                <span>
+                    <small><strong>© 2016 - Bản quyền của Công Ty Cổ Phần Ti Ki - Tiki.vn<br></strong></small>
+                    <span><small>Giấy chứng nhận Đăng ký Kinh doanh số 0309532909 do Sở Kế hoạch và Đầu tư Thành phố Hồ
+                            Chí Minh cấp ngày 06/01/2010</small></span>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>

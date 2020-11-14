@@ -1,0 +1,553 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*=============== FONT ================*/
+$font-family: Roboto,Helvetica,Arial,sans-serif;
+
+/*=============== COLOR================*/
+$color-white: #ffff;
+$color-black: #0000;
+$color-vang-dam: #FAD556;
+$color-vang-star: #FFC120;
+$color-xanh-dam: #1D71AB;
+
+
+/*=============== BACKGROUND ================*/
+$background-blue: #189AFF;
+
+
+body{
+    background: #F4F4F4;
+    #img-body-left{
+        position: absolute;
+        z-index: -20;
+        top: 50%;
+        left: 0%;
+        width: 50px;
+        background-repeat: no-repeat;
+        background-attachment: fixed;;
+    }
+    #img-body-right{
+        position: absolute;
+        z-index: -20;
+        top: 50%;
+        width: 50px;
+        right: 0%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+}
+
+/*icom sroll to top*/
+.scrolltop{
+    width: 50px;
+    height: 50px;
+    border: 2px solid #1D71AB;
+    position: absolute;
+    z-index: 5000;
+    right: 20px;
+    bottom: 20px;
+    position: fixed;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #189AFF;
+    display:none;
+    &:hover{
+        background-color: black;
+        transition: 0.6s;
+    }
+    .scroll {
+        i{
+            text-align: center;
+            margin-top: 20%;
+            margin-left: 30%;
+            font-size: 2em;
+            animation: animation-scroll 0.5s infinite alternate;
+            color: #fff;
+        }
+    }
+}
+@keyframes animation-scroll{
+    from{
+        margin-top: 20%;
+    }
+    to{
+        margin-top: -5%;
+    }
+}
+/*--------------------------------------Modal-------------------------------------------------*/
+
+
+
+/*========================================================================================*/
+
+.my-row{
+    width: 100%;
+    a{
+       img{
+            width: 100%;
+            height: 50px;
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------------------*/
+.my-row-nav-1{
+    width: 100%;
+
+    #navbar-1{
+        max-height: 35px;
+        background: $color-xanh-dam;
+
+
+        button{
+            max-height: 30px;
+            margin-top: -1%;
+            span{
+                font-size: 13px;
+            }
+
+        }
+        div{
+            ul{
+                margin-left: 100px;
+
+                li{
+                    padding-right: 20px;
+                    font-size: 12px;
+                    white-space: nowrap;
+
+                    a{
+                        color: $color-white;
+                        &:hover{
+                            color: #C3C3C3;
+                        }
+                        i{
+                            color: $color-vang-dam;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+#container-section-3{
+    background: $background-blue;
+    padding-top: 20px;
+    .my-row-sec-3{
+        margin-left: 20px;
+        margin-right: 20px;
+        white-space: nowrap;
+        div{
+            min-height: 40px;
+            div{
+                div{
+                    position: relative;
+                    cursor: pointer;
+                    #modal-login-account{
+                        position: absolute;
+                        z-index: 88;
+                        min-width:230px;
+                        left: -70%;
+                        top: 100%;
+                        background: #F4F4F4;
+                        border-radius: 6px;
+                        display: none;
+                        button{
+                            width: 80%;
+                            margin-left: 10%;
+                            margin-top: 3%;
+                            margin-bottom: 2%;
+                        }
+                       
+                    }
+                }
+                &:hover #modal-login-account{
+                    display: block;
+                }
+            }
+            img{
+                margin-top: 5px;
+            }
+            #sec-3-1{
+                background-color: $background-blue;
+            }
+            button{
+                color: $color-white;
+                letter-spacing: 1px;
+              
+                span{
+                    i{
+                        color: $color-white;
+                        margin-right: 5px;
+                    }
+                }
+            }
+            .giohang{
+                width: 300px;
+                height: 100px;
+                background: #ffffff;
+                box-shadow: 1px 1px 15px #b3b3b3;
+                border-radius: 6px;
+                font-family: $font-family;
+                font-size: 14px;
+                position: absolute;
+                z-index: 6000;
+                top: 127%;
+                left: -48%;
+                p{
+                    margin-left: 20px;
+                    margin-top: 10px;
+                    letter-spacing: 0.6px;
+                    i{
+                        color: green;
+                    }
+                }
+                button{
+                    width: 87%;
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    font-size: 14px;
+                }
+                span{
+                    font-size: 16px;
+                    font-weight: bold;
+                    position: absolute;
+                    top: 2%;
+                    right: 5%;
+                    cursor: pointer;
+                }
+                .fa-caret-up{
+                    font-size: 2em;
+                    color: #ffff;
+                    position: absolute;
+                    top: -18%;
+                    left: 89%;
+                }
+            }
+           div{
+               div{
+                   position: relative;
+                   p{
+                       position: absolute;
+                       left: 25%;
+                       top: 20%;
+                       color: $color-white;
+                   }
+                   span{
+                    font-size: 12px;
+                    white-space: nowrap;
+                    color: $color-white;
+                    letter-spacing: 0.9px;
+                    position: absolute;
+                    left: 5%;
+                    
+                   }
+               }
+           }
+        }
+
+    }
+
+    .my-row-sec-3-2{
+        margin-top: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+        div{
+            min-height: 40px;
+            div{
+                div{
+                    position: relative;
+                    p{
+                        position: absolute;
+                        left: -5%;
+                        top: 20%;
+                        white-space: nowrap;
+                        font-size: 12px;
+                        color: $color-white;
+                        letter-spacing: 0.6px;
+                        font-weight: 300;
+                        cursor: pointer;
+                        &:hover{
+                            color: #f7f7f7;
+                        }
+                    }
+                    #danhmucsanpham{
+                        color: #fff;
+                        font-size:13px;
+                        letter-spacing: 0.6px;
+                        font-weight: 500;
+                        cursor: pointer;
+                        transition: 0.2s;
+                    }
+                    #text-ab-2{
+                        position: absolute;
+                        top: 0%;
+                        font-size: 13px;
+                    }
+                    span{
+                        i{
+                            color: $color-white;
+                            font-size: 1.5em;
+                            margin-top: 5px;
+                            }
+                        }
+                       
+                }
+                &:hover i{
+                    color: #1D71AB;
+                    cursor: pointer;
+                    transition: 0.7s;
+            }
+            &:hover i{
+                color: #1D71AB;
+                cursor: pointer;
+                transition: 0.7s;
+        }
+            }
+        }
+    }
+}
+/***************************************Product**********************************************/
+
+
+#list-item-cus-left{
+    &:hover{
+        background: #189AFF;
+    }
+    &:hover p{
+        color: #fff;
+    }
+    &:hover{
+        span{
+            i{
+                color: #fff;
+            }
+        }
+    }
+}
+/*********************************Prodcuct-Content***********************************************************/
+#product-container{
+    padding-left: 40px;
+    padding-right: 40px;
+    .container-fluid{
+        #my-product{
+            background-color: #fff;
+            #pro-3-left{
+                .row{
+                    .col-lg-3{
+                        img{
+                            max-width: 75px;
+                            max-height: 75px;
+                            border: 1px solid #C3C3C3;
+                            margin-top: 15px;
+                            cursor: pointer;
+                            background-color: #fff;
+                            box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+                            
+                        }
+                        .active-img-border{
+                            border: 1px solid #189AFF;
+                        }
+                        
+                    }
+                    .col-lg-9{
+                            img{
+                                max-width: 391px;
+                                max-height: 391px;
+                                margin-top: 50px;
+                                cursor: pointer;
+
+                            }
+                            p{
+                                font-size: 13px;
+                                padding-top: 20px;
+                                padding-left: 60px;
+                                font-family: Arial, Helvetica, sans-serif;
+                            }
+                    }
+                }
+            }
+            #pro-3-right{
+                border-left: 1px solid rgba(139, 125, 125, 0.253);
+                .row{
+                    width: 100%;
+                    .col-lg-12{
+                        padding: 0;
+                        #content-border{
+                            padding-top: 10px;
+                            padding-bottom: 12px;
+                            border-bottom: 1px solid rgba(139, 125, 125, 0.253);
+                            #title{
+                                font-size: 24px;
+                                font-weight: 300;
+                                white-space: nowrap;
+                                padding-left: 25px;
+                            }
+                            #content-p-1{
+                                padding-left: 25px;
+                               
+                                i{
+                                    color: #FFC120;
+                                    cursor: pointer;
+                                }
+                                a{
+                                    text-decoration: none;
+                                    font-size: 13px;
+                                }
+                            }
+                            #content-p-2{
+                                padding-left: 25px;
+                                span{
+                                    margin-top: 0px;
+                                    font-size: 13px;
+                                    a{
+                                        text-decoration: none;
+                                    }
+                                }
+                            }
+                           
+                        }
+                       
+                    }
+                }
+                #contaient-bor-bot{
+                    .col-lg-8{
+                        #content-border-bot{
+                            padding-top: 10px;
+                            padding-bottom: 12px;
+                            border-bottom: 1px solid rgba(139, 125, 125, 0.253);
+                            #content-p-3{
+                                #span-p-3{
+                                    padding-left: 25px;
+                                    i{
+                                        font-size: 20px;
+                                        margin-top: 5px;
+                                        color: red;
+                                    }
+                                }
+                            }
+                            #content-p-3{
+                                padding-left: 25px;
+                                #chonmua{
+                                    padding: 10px 20px 10px 20px;
+                                    margin-left: 15px;
+                                    margin-top: 10px;
+                                    span{
+                                        letter-spacing: 0.6px;
+                                    }
+                                }
+                                i{
+                                    &:hover{
+                                        color: orange;
+                                    }
+                                }
+                                .ui-spinner{
+                                    width: 90px;
+                                    height: 35px;
+                                }
+                            }
+                            
+                            ul{
+                                padding-top: 20px;
+                                border-top: 1px solid rgba(139, 125, 125, 0.253);
+                                padding-left: 30px;
+                                color: #333;
+                                font-size: 15px;
+                            }
+                        }
+                    }
+
+                    .col-lg-4{
+                        #col-right-right-product{
+                            margin-top:15px;
+                            border: 1px solid rgba(139, 125, 125, 0.253);
+                            padding-left: 7px;
+                            padding-right: 7px;
+                            .row{
+                                .col-lg-2{
+                                    font-size: 1.5em;
+                                    color: #FFC120;
+                                }
+                                .col-lg-10{
+                                    span{
+                                        font-size: 13px;
+                                        white-space: nowrap;
+                                    }
+                                }
+                            }
+                            #xemngayne{
+                                padding-top: 1px;
+                                padding-left: 1px;
+                                margin-top: 8px;
+                                margin-bottom: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*----------------------------------------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------------*/
+#section-new-letter{
+    margin-top: 10px;
+    margin-bottom: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
+    #new-letter{
+        background: #f7f7f7;
+        height: 160px;
+        &:hover{
+            box-shadow: rgba(0,0,0,0.1) 0px 0px 20px 0px;
+        }
+        div{
+            position: relative;
+            img{
+                margin-top: 12%;
+            }
+            span{
+                white-space: nowrap;
+                position: absolute;
+                top: 35%;
+                font-weight: 700;
+            }
+            .input-group{
+                position: absolute;
+                top: 45%;
+            }
+        }
+    }
+}
+
+
+/*--------------------------------------Footer---------------------------------------------*/
+
+#footer-containt{
+    padding-left: 40px;
+    padding-right: 40px;
+    #footer-room{
+        div{
+            ul{
+                list-style-type: none;
+                a{
+                    text-decoration: none;
+                    color: black;
+                    li{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
